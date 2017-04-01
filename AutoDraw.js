@@ -1,4 +1,4 @@
-Riye = {
+AutoDraw = {
 	getColorOfTile: function(x, y){
 		var cntx = document.getElementById("place-canvasse").getContext('2d');
 		var col = cntx.getImageData(x,y,1,1).data;
@@ -27,9 +27,9 @@ Riye = {
 		var img = new Image;
 		img.src = this.image;
 		img.onload = function(){
-			Riye.guideCanvas.width = this.width;
-			Riye.guideCanvas.height= this.height;
-			Riye.guideContext.drawImage(this,0,0);
+			AutoDraw.guideCanvas.width = this.width;
+			AutoDraw.guideCanvas.height= this.height;
+			AutoDraw.guideContext.drawImage(this,0,0);
 		}
 	},
 	getGuideColorOfTile: function(x,y){
@@ -53,13 +53,13 @@ Riye = {
 	},
 	start: function(){
 		this.none = false;
-		Riye.loadGuide(452,281);
-		Riye.findNextTile();
+		AutoDraw.loadGuide(452,281);
+		AutoDraw.findNextTile();
 		this.pid = setInterval(function() {
 
 			if (r.place.getCooldownTimeRemaining() <= 0){
-				console.log('Drawing at ' + Riye.findNextTile());
-				Riye.paintTile();
+				console.log('Drawing at ' + AutoDraw.findNextTile());
+				AutoDraw.paintTile();
 			}
 		}, 5000);
 	},
@@ -69,6 +69,6 @@ Riye = {
 	}
 }
 
-Riye.offset(x,y);  //The offset for the pixel art
-Riye.Image("");    //DataURL of Pixel art
-Riye.start();	   //Start
+AutoDraw.offset(x,y);  //The offset for the pixel art
+AutoDraw.Image("");    //DataURL of Pixel art
+AutoDraw.start();	   //Start
