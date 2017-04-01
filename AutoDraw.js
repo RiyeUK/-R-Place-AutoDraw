@@ -69,6 +69,6 @@ Riye = {
 	}
 }
 
-Riye.offset(452,281);   //The offset for the pixel art
-Riye.Image("data url"); //DataURL of Pixel art
-Riye.start();			//Start
+Riye.offset(x,y);  //The offset for the pixel art
+Riye.Image("");    //DataURL of Pixel art
+Riye.start();	   //Start
