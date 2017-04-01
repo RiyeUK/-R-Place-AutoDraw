@@ -70,5 +70,5 @@ AutoDraw = {
 }
 
 AutoDraw.offset(x,y);  //The offset for the pixel art
-AutoDraw.Image("");    //DataURL of Pixel art
+AutoDraw.image("");    //DataURL of Pixel art
 AutoDraw.start();	   //Start
